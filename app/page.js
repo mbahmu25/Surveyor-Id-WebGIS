@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef,forwardRef } from "react";
 import ReactToPrint from 'react-to-print';
+import Map from '../components/Map'
 
 export default function Home() {
   const componentRef = useRef();
@@ -12,6 +13,7 @@ export default function Home() {
         trigger={() => <button>{'Print'}</button>}
         content={() => componentRef.current}
       />
+      <Map />
       <div className="hidden">
         <Report ref={componentRef} deskrispi={"Q Qawa aw aw aw a wdoijd a coajsc oia coia c"} tanggal={"4/20/69"}/>
       </div>
