@@ -2,6 +2,7 @@
   "name": "surveyorid",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/Surveyor-Id-WebGIS",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
