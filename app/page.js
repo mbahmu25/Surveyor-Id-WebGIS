@@ -33,9 +33,9 @@ const Report = forwardRef(({deskrispi,tanggal}, ref) => {
             <div className="flex flex-row w-full h-[8vh]">
               {/* Company Logo */}
               <div className="flex flex-row justify-center items-center border-b-[2px] border-r-[2px] border-black h-full w-[50%] relative p-3">
-                  <img src={'/pertamina.svg'}   className="object-contain h-[50%] w-[50%]" alt="Pertamina"  />
-                  <img src={'/surveyid.png'}    className="object-contain pl-2 h-[50%] w-[50%]" alt="Survey Id"  />
-                  <img src={'/surveyor_id.png'} className="object-contain h-[50%] w-[50%]" alt="Surveyor Indonesia"  />
+                  <img src={'./pertamina.svg'}   className="object-contain h-[50%] w-[50%]" alt="Pertamina"  />
+                  <img src={'./surveyid.png'}    className="object-contain pl-2 h-[50%] w-[50%]" alt="Survey Id"  />
+                  <img src={'./surveyor_id.png'} className="object-contain h-[50%] w-[50%]" alt="Surveyor Indonesia"  />
               </div>
               {/* ini ID Lokasi  */}
               <div className="border-b-[2px] border-r-[2px] border-black h-full w-[30%] text-center">
