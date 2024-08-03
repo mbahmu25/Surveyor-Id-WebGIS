@@ -174,9 +174,167 @@ const Report = forwardRef(({deskrispi,tanggal}, ref) => {
       </div>
       {/* Ini Page 2 */}
       <div className=" w-full h-[100vh] p-[24px] py-[100px]">
-        <div className="border-[4px] border-black h-full">
-          <p className="text-[24pt] text-red-500">are</p>
-          <Oy />
+        <div className="border-[4px] border-black">
+          {/* Company Logo */}
+          <div className="flex justify-end">
+            <img src={'./pertamina.svg'}   className="object-contain my-1 mr-1 h-[20%] w-[20%]" alt="Pertamina"  />
+          </div>
+          {/* controllign n check asset ribbon */}
+          <div className="text-[10pt] font-bold text-center bg-[#2e9eb8]">
+            CONTROLLING AND CHECK ASSET
+          </div>
+          {/* Header */}
+          <div className="flex flex-row text-[10pt]">
+            {/* Header Kiri */}
+            <div className="w-full py-2 px-4">
+              <table className="w-full">
+                <tbody>
+                  <tr>
+                    <td className="w-[15%]">
+                      Hari
+                    </td>
+                    <td className="w-[75%]">
+                      : Selasa
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="w-[15%]">
+                      Tanggal
+                    </td>
+                    <td className="w-[75%]">
+                      : 05 Maret 2024
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="w-[15%]">
+                      Wilayah
+                    </td>
+                    <td className="w-[75%]">
+                      : Selasa
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            {/* Header kanan */}
+            <div className="w-full py-2 px-4">
+              <table className="w-full">
+                <tbody>
+                  <tr>
+                    <td className="w-[25%]">
+                      Pemeriksa
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="w-[25%]">
+                      - {/* Tanda tangan pemeriksa*/}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          {/* Komisi Asset dan Pemeriksaan */}
+          <div className="text-[10pt] text-[white] text-center bg-[#d1332e]">
+            Komisi Asset dan Pemeriksaan
+          </div>
+          {/* Kondisi Asset */}
+          <p className="text-[10pt] py-2 px-4">
+            1. loram <br></br>
+            2. aku  <br></br>
+            3. suka <br></br>
+            4. <br></br>
+          </p>
+          <div className="m-4">
+            <table className="w-[100%] border-collapse border border-black">
+              <thead>
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">No. Asset Bangunan</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">Lokasi</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Quantity (UNIT)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Status Asset</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Asset Class</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">PTH</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Permasalahan Hukum</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Plang</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Patok</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Pagar</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Penjagaan</td>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Add your rows here */}
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                </tr>
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                </tr>
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                </tr>
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                </tr>
+                <tr className="border border-black text-[8pt] text-center font-semibold">
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
+                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
+                </tr>
+                {/* Repeat above <tr> block for more rows */}
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
     </div>
