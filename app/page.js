@@ -3,19 +3,55 @@ import Image from "next/image";
 import { useRef,forwardRef } from "react";
 import ReactToPrint from 'react-to-print';
 import Map from '../components/Map'
+import { TabMenu } from 'primereact/tabmenu';
+import { Panel } from 'primereact/panel';
+import 'primeicons/primeicons.css';
+import "primereact/resources/themes/lara-light-blue/theme.css"
 
 export default function Home() {
   const componentRef = useRef();
-
+  const items = [
+    { label: 'Map', icon: 'pi pi-map', url:'.' },
+    { label: 'Dashboard', icon: 'pi pi-database' ,url:'./dashboard'},
+  ];
   return (
-    <main>
-      <ReactToPrint
-        trigger={() => <button>{'Print'}</button>}
-        content={() => componentRef.current}
-      />
-      <Map />
-      <div className="">
-        <Report ref={componentRef} deskrispi={"JL. MUKTI NO. 9 (KOMPLEK PELITA AIR SERVICE) , KELURAHAN BATU AMPAR, KECAMATAN KRAMATJATI, KOTA ADM. JAKARTA TIMUR, PROVINSI DKI JAKARTA"} tanggal={"4/20/69"}/>
+    <main className="h-[100vh] w-full flex flex-col">
+      {/* Header Section */}
+      <div className="flex items-center justify-center align-center h-15  border-b-[2pt] border-black">
+        <img src="./pertamina.svg" className="object-contain h-8 mr-2" alt="Pertamina" />
+        {/* <i className="pi pi-times" style={{fontWeight:"8pt"}}></i>
+        <img src={'./surveyor_id.png'} className="object-contain h-8 mr-2 ml-2" alt="Surveyor Indonesia"  /> */}
+        <div className="border border-gray-700 h-[60%] rounded-[10pt]"></div>
+        <TabMenu model={items} />
+      </div>
+
+      {/* Main Content Section */}
+      <div className="flex-1 relative">
+        {/* Legenda Section */}
+        <div className="fixed bottom-0 left-0 m-5 z-50 w-auto h-auto">
+          <div className="bg-white text-center font-bold text-xl">
+            <div className="border border-black p-2">Legenda</div>
+            <img
+              src="https://bhumi.atrbpn.go.id/mapproxy/service?format=image%2Fpng&layer=bhumi_persil&sld_version=1.1.0&request=GetLegendGraphic&service=WMS&version=1.1.1&styles="
+              alt="legend"
+              className="border border-black "
+            />
+          </div>
+        </div>
+
+        {/* Responsive Map */}
+        {/* <div className="h-full w-full"> */}
+          <Map />
+        {/* </div> */}
+      </div>
+
+      {/* Hidden Report Component for Printing */}
+      <div className="hidden">
+        <Report
+          ref={componentRef}
+          deskrispi={"JL. MUKTI NO. 9 (KOMPLEK PELITA AIR SERVICE) , KELURAHAN BATU AMPAR, KECAMATAN KRAMATJATI, KOTA ADM. JAKARTA TIMUR, PROVINSI DKI JAKARTA"}
+          tanggal={"4/20/69"}
+        />
       </div>
     </main>
   );
@@ -173,7 +209,7 @@ const Report = forwardRef(({deskrispi,tanggal}, ref) => {
         </div>
       </div>
       {/* Ini Page 2 */}
-      <div className=" w-full h-[100vh] p-[24px] py-[100px]">
+      <div className=" w-full p-[24px] py-[100px]">
         <div className="border-[4px] border-black">
           {/* Company Logo */}
           <div className="flex justify-end">
@@ -317,23 +353,32 @@ const Report = forwardRef(({deskrispi,tanggal}, ref) => {
                   <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
                   <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
                 </tr>
-                <tr className="border border-black text-[8pt] text-center font-semibold">
-                  <td className="border border-black bg-[#87bbe6] p-2 w-[1%] p-1 break-words ">500024112</td>
-                  <td className="border border-black bg-[#87bbe6] p-2 w-[10%]">KP-TTELKOM (DH. KP-TOMANG)</td>
-                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">1</td>
-                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">Clear</td>
-                  <td className="border border-black bg-[#87bbe6] p-2 w-[5%]">5145</td>
-                  <td className="border border-black bg-[#ebc57a] p-2 w-[1%]">Tidak Ada</td>
-                  <td className="border border-black bg-[#ebc57a] p-2 w-[5%] break-words">Tidak Ada</td>
-                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada (Nomor Aset Tahun 2022)</td>
-                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Tidak Ada</td>
-                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
-                  <td className="border border-black bg-[#b0eb7a] p-2 w-[5%]">Ada</td>
-                </tr>
+                
                 {/* Repeat above <tr> block for more rows */}
               </tbody>
             </table>
           </div>
+
+        </div>
+      </div>
+      {/* Ini Page 3 */}
+      <div className=" w-full h-[100vh] p-[24px] py-[100px]">
+        <div className="border-[4px] border-black h-full">
+
+        </div>
+      </div>
+      <div className=" w-full h-[100vh] p-[24px] py-[100px]">
+        <div className="border-[4px] border-black h-full">
+
+        </div>
+      </div>
+      <div className=" w-full h-[100vh] p-[24px] py-[100px]">
+        <div className="border-[4px] border-black h-full">
+
+        </div>
+      </div>
+      <div className=" w-full h-[100vh] p-[24px] py-[100px]">
+        <div className="border-[4px] border-black h-full">
 
         </div>
       </div>
