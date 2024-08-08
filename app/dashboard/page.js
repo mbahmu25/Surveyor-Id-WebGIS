@@ -13,8 +13,13 @@ import "primereact/resources/themes/bootstrap4-light-blue/theme.css"
 
 export default function Home() {
   const [sideBar, setSideBar] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
+  const [initWindows, setWindows]  = useState(false);
   useEffect(() => {
+    if (!initWindows){
+        setWidth(window.innerWidth);
+        setWindows(true)
+    }
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
@@ -36,6 +41,7 @@ export default function Home() {
 
   ];
   console.log(width)
+  console.log(initWindows)
   return (
     <main className="h-[100vh] w-full flex flex-col shadow-xl">
       {/* Header Section */}
